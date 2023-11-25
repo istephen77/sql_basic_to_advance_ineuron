@@ -1863,6 +1863,7 @@ ON (C.COUNTRY_ID = W.COUNTRY_ID)
 WHERE LEFT(W.`DAY`, 7) = "2019-11"
 GROUP BY COUNTRY_NAME;
 
--- SOLUTION 2
+-- TO AUTO-POPULATE TABLE USING CSVKIT PYTHON
+csvsql --dialect mysql --snifflimit 10000 sales_data_final.csv > sales_output.sql
 
   
